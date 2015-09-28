@@ -4,8 +4,13 @@ public class SquareCounterApp {
 
 	public long calculateSquares(int n){
 		long count = 1;
-		for(int i=n; i>= 2; i--){
-			count += (long)(i*i);
+		if (n <= 0){
+			count = -1;
+		}
+		else{
+			for(int i=n; i>= 2; i--){
+				count += (long)(i*i);
+			}
 		}
 		return count;
 	}
